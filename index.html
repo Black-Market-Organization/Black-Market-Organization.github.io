@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Market SD Privacy Policy</title>
+    <!-- Add Poppins and Tajawal fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif; /* Use Poppins for English */
             line-height: 1.8;
             margin: 0;
             padding: 0;
@@ -17,10 +19,11 @@
         .container {
             max-width: 800px;
             margin: 40px auto;
-            padding: 30px;
+            padding: 40px;
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         .logo {
@@ -31,6 +34,12 @@
         .logo img {
             max-width: 150px; /* Adjust the size of your logo */
             height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         h1 {
@@ -38,6 +47,7 @@
             color: #2c3e50;
             margin-bottom: 20px;
             text-align: center;
+            font-weight: 600;
         }
 
         h2 {
@@ -47,21 +57,23 @@
             margin-bottom: 15px;
             border-bottom: 2px solid #eaeaea;
             padding-bottom: 10px;
+            font-weight: 500;
         }
 
         p {
             font-size: 1rem;
-            margin: 10px 0;
+            margin: 15px 0;
             color: #555;
         }
 
         ul {
-            margin: 10px 0;
+            margin: 15px 0;
             padding-left: 20px;
         }
 
         ul li {
             margin-bottom: 10px;
+            color: #555;
         }
 
         a {
@@ -93,6 +105,47 @@
             color: #777;
         }
 
+        /* Language Toggle Button */
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-toggle button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .language-toggle button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .language-toggle button:active {
+            transform: scale(0.9);
+        }
+
+        .arabic {
+            direction: rtl;
+            font-family: 'Tajawal', sans-serif; /* Use Tajawal for Arabic */
+        }
+
+        .hidden {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -115,72 +168,162 @@
 </head>
 <body>
     <div class="container">
+        <!-- Language Toggle Button -->
+        <div class="language-toggle">
+            <button id="toggleLanguage">EN</button>
+        </div>
+
         <!-- Logo Section -->
         <div class="logo">
             <img src="logo.png" alt="Black Market SD Logo">
         </div>
 
-        <h1>Black Market SD Privacy Policy</h1>
-        <p class="effective-date"><em>Effective as of January 16, 2025</em></p>
+        <!-- English Content -->
+        <div id="englishContent">
+            <h1>Black Market SD Privacy Policy</h1>
+            <p class="effective-date"><em>Effective as of January 16, 2025</em></p>
 
-        <p>This privacy policy applies to the Black Market SD app (hereby referred to as "Application") for mobile devices that was created by Black Market SD (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p>
+            <p>This privacy policy applies to the Black Market SD app (hereby referred to as "Application") for mobile devices that was created by Black Market SD (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p>
 
-        <h2>Information Collection and Use</h2>
-        <p>The Application collects information when you download and use it. This information may include information such as:</p>
-        <ul>
-            <li>Your device's Internet Protocol address (e.g. IP address)</li>
-            <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
-            <li>The time spent on the Application</li>
-            <li>The operating system you use on your mobile device</li>
-        </ul>
-        <p>The Application does not gather precise information about the location of your mobile device.</p>
+            <h2>Information Collection and Use</h2>
+            <p>The Application collects information when you download and use it. This information may include information such as:</p>
+            <ul>
+                <li>Your device's Internet Protocol address (e.g. IP address)</li>
+                <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+                <li>The time spent on the Application</li>
+                <li>The operating system you use on your mobile device</li>
+            </ul>
+            <p>The Application does not gather precise information about the location of your mobile device.</p>
 
-        <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices, and marketing promotions.</p>
+            <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices, and marketing promotions.</p>
 
-        <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>. The information that the Service Provider requests will be retained by them and used as described in this privacy policy.</p>
+            <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>. The information that the Service Provider requests will be retained by them and used as described in this privacy policy.</p>
 
-        <h2>Third Party Access</h2>
-        <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+            <h2>Third Party Access</h2>
+            <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
 
-        <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" target="_blank">Google Analytics for Firebase</a></li>
-            <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank">Firebase Crashlytics</a></li>
-        </ul>
+            <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Services</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Google Analytics for Firebase</a></li>
+                <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank">Firebase Crashlytics</a></li>
+            </ul>
 
-        <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-        <ul>
-            <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
-            <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
-            <li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
-        </ul>
+            <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+            <ul>
+                <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
+                <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+                <li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+            </ul>
 
-        <h2>Opt-Out Rights</h2>
-        <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+            <h2>Opt-Out Rights</h2>
+            <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
 
-        <h2>Data Retention Policy</h2>
-        <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a> and they will respond in a reasonable time.</p>
+            <h2>Data Retention Policy</h2>
+            <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a> and they will respond in a reasonable time.</p>
 
-        <h2>Children</h2>
-        <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
-        <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discovers that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (<a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>) so that they will be able to take the necessary actions.</p>
+            <h2>Children</h2>
+            <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+            <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discovers that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (<a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>) so that they will be able to take the necessary actions.</p>
 
-        <h2>Security</h2>
-        <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+            <h2>Security</h2>
+            <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
 
-        <h2>Changes</h2>
-        <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+            <h2>Changes</h2>
+            <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
 
-        <h2>Your Consent</h2>
-        <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+            <h2>Your Consent</h2>
+            <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
 
-        <h2>Contact Us</h2>
-        <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>.</p>
+            <h2>Contact Us</h2>
+            <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>.</p>
+        </div>
+
+        <!-- Arabic Content -->
+        <div id="arabicContent" class="hidden arabic">
+            <h1>سياسة خصوصية Black Market SD</h1>
+            <p class="effective-date"><em>ساري المفعول اعتبارًا من 16 يناير 2025</em></p>
+
+            <p>تنطبق سياسة الخصوصية هذه على تطبيق Black Market SD (يشار إليه فيما يلي باسم "التطبيق") للأجهزة المحمولة الذي تم إنشاؤه بواسطة Black Market SD (يشار إليه فيما يلي باسم "مزود الخدمة") كخدمة مجانية. هذه الخدمة مخصصة للاستخدام "كما هي".</p>
+
+            <h2>جمع المعلومات واستخدامها</h2>
+            <p>يجمع التطبيق المعلومات عند تنزيله واستخدامه. قد تتضمن هذه المعلومات معلومات مثل:</p>
+            <ul>
+                <li>عنوان بروتوكول الإنترنت لجهازك (على سبيل المثال، عنوان IP)</li>
+                <li>الصفحات التي تزورها في التطبيق، وقت وتاريخ زيارتك، الوقت الذي تقضيه في تلك الصفحات</li>
+                <li>الوقت الذي تقضيه في التطبيق</li>
+                <li>نظام التشغيل الذي تستخدمه على جهازك المحمول</li>
+            </ul>
+            <p>لا يجمع التطبيق معلومات دقيقة عن موقع جهازك المحمول.</p>
+
+            <p>قد يستخدم مزود الخدمة المعلومات التي قدمتها للاتصال بك من وقت لآخر لتزويدك بمعلومات مهمة، إشعارات مطلوبة، وعروض ترويجية تسويقية.</p>
+
+            <p>لتحسين تجربة الاستخدام، قد يطلب منك مزود الخدمة تقديم معلومات تعريف شخصية معينة، بما في ذلك على سبيل المثال لا الحصر <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>. سيتم الاحتفاظ بالمعلومات التي يطلبها مزود الخدمة واستخدامها كما هو موضح في سياسة الخصوصية هذه.</p>
+
+            <h2>وصول أطراف ثالثة</h2>
+            <p>يتم نقل البيانات المجمعة والمجهولة الهوية بشكل دوري إلى خدمات خارجية لمساعدة مزود الخدمة في تحسين التطبيق وخدماتهم. قد يشارك مزود الخدمة معلوماتك مع أطراف ثالثة بالطرق الموصوفة في بيان الخصوصية هذا.</p>
+
+            <p>يرجى ملاحظة أن التطبيق يستخدم خدمات أطراف ثالثة لديها سياسة خصوصية خاصة بها حول التعامل مع البيانات. فيما يلي روابط لسياسة الخصوصية لمقدمي خدمات الأطراف الثالثة المستخدمة في التطبيق:</p>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">خدمات Google Play</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Google Analytics for Firebase</a></li>
+                <li><a href="https://firebase.google.com/terms/crashlytics" target="_blank">Firebase Crashlytics</a></li>
+            </ul>
+
+            <p>قد يكشف مزود الخدمة عن المعلومات التي قدمها المستخدم والتي تم جمعها تلقائيًا:</p>
+            <ul>
+                <li>كما هو مطلوب بموجب القانون، مثل الامتثال لاستدعاء أو عملية قانونية مماثلة؛</li>
+                <li>عندما يعتقدون بحسن نية أن الكشف ضروري لحماية حقوقهم، حماية سلامتك أو سلامة الآخرين، التحقيق في الاحتيال، أو الاستجابة لطلب حكومي؛</li>
+                <li>مع مقدمي الخدمات الموثوق بهم الذين يعملون نيابة عنهم، ولا يستخدمون المعلومات التي نكشف عنها لهم بشكل مستقل، ووافقوا على الالتزام بالقواعد المنصوص عليها في بيان الخصوصية هذا.</li>
+            </ul>
+
+            <h2>حقوق الانسحاب</h2>
+            <p>يمكنك إيقاف جمع جميع المعلومات بواسطة التطبيق بسهولة عن طريق إلغاء تثبيته. يمكنك استخدام عمليات الإلغاء القياسية المتاحة كجزء من جهازك المحمول أو عبر سوق تطبيقات الأجهزة المحمولة أو الشبكة.</p>
+
+            <h2>سياسة الاحتفاظ بالبيانات</h2>
+            <p>سيحتفظ مزود الخدمة بالبيانات التي قدمها المستخدم طالما كنت تستخدم التطبيق ولمدة معقولة بعد ذلك. إذا كنت ترغب في حذف البيانات التي قدمتها عبر التطبيق، يرجى الاتصال بهم على <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a> وسيتم الرد عليك في وقت معقول.</p>
+
+            <h2>الأطفال</h2>
+            <p>لا يستخدم مزود الخدمة التطبيق لجمع البيانات من الأطفال تحت سن 13 عامًا أو التسويق لهم.</p>
+            <p>لا يخاطب التطبيق أي شخص تحت سن 13 عامًا. لا يجمع مزود الخدمة معلومات تعريف شخصية من الأطفال تحت سن 13 عامًا. في حالة اكتشاف مزود الخدمة أن طفلًا تحت سن 13 عامًا قد قدم معلومات شخصية، فسيقوم مزود الخدمة بحذف هذه المعلومات فورًا من خوادمهم. إذا كنت والدًا أو وصيًا وكنت تعلم أن طفلك قد قدم لنا معلومات شخصية، يرجى الاتصال بمزود الخدمة (<a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>) حتى يتمكنوا من اتخاذ الإجراءات اللازمة.</p>
+
+            <h2>الأمان</h2>
+            <p>يهتم مزود الخدمة بحماية سرية معلوماتك. يوفر مزود الخدمة ضمانات مادية وإلكترونية وإجرائية لحماية المعلومات التي يعالجها ويحتفظ بها.</p>
+
+            <h2>التغييرات</h2>
+            <p>قد يتم تحديث سياسة الخصوصية هذه من وقت لآخر لأي سبب. سيتم إعلامك بأي تغييرات على سياسة الخصوصية عن طريق تحديث هذه الصفحة بالسياسة الجديدة. ينصح بمراجعة سياسة الخصوصية هذه بانتظام لأي تغييرات، حيث يعتبر الاستمرار في الاستخدام موافقة على جميع التغييرات.</p>
+
+            <h2>موافقتك</h2>
+            <p>باستخدام التطبيق، فإنك توافق على معالجة معلوماتك كما هو منصوص عليه في سياسة الخصوصية هذه الآن وكما يتم تعديلها من قبلنا.</p>
+
+            <h2>اتصل بنا</h2>
+            <p>إذا كانت لديك أي أسئلة بخصوص الخصوصية أثناء استخدام التطبيق، أو لديك أسئلة حول الممارسات، يرجى الاتصال بمزود الخدمة عبر البريد الإلكتروني على <a href="mailto:blackmarketsd@gmail.com" class="contact-email">blackmarketsd@gmail.com</a>.</p>
+        </div>
 
         <div class="footer">
             &copy; 2025 Black Market SD. All rights reserved.
         </div>
     </div>
+
+    <script>
+        // JavaScript to toggle between English and Arabic
+        const toggleButton = document.getElementById('toggleLanguage');
+        const englishContent = document.getElementById('englishContent');
+        const arabicContent = document.getElementById('arabicContent');
+
+        toggleButton.addEventListener('click', () => {
+            if (englishContent.classList.contains('hidden')) {
+                // Switch to English
+                englishContent.classList.remove('hidden');
+                arabicContent.classList.add('hidden');
+                toggleButton.textContent = 'AR';
+            } else {
+                // Switch to Arabic
+                arabicContent.classList.remove('hidden');
+                englishContent.classList.add('hidden');
+                toggleButton.textContent = 'EN';
+            }
+        });
+    </script>
 </body>
 </html>
