@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+#language-selector {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#lang-select {
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#lang-select:hover {
+    background-color: #FFB900;
+}
+
+/* Header Styles */
+header {
+    background-color: #FFD700;
+    padding: 1em 0;
+    position: relative;
+    z-index: 1000;
+    margin-bottom: 2em;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header a img {
+    width: 150px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFB900;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #FFB900;
+}
+
+/* Features and Benefits Styles */
+.features .container, .benefits .container {
+    padding: 3em 0;
+}
+
+.features-inner, .benefits-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature, .benefit {
+    width: 30%;
+    margin: 1.5%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover, .benefit:hover {
+    transform: translateY(-10px);
+}
+
+.feature img, .benefit img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+/* Download Section Styles */
+.download {
+    background-color: #FFD700;
+    color: #333;
+    padding: 3em 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-button img {
+    margin: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #FFD700;
+    padding: 3em 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social-media a:hover {
+    transform: scale(1.2);
+}
+
+/* Arabic Styles */
+body.arabic {
+    direction: rtl;
+}
+
+body.arabic .container {
+    text-align: right;
+}
+
+body.arabic nav ul {
+    flex-direction: row-reverse;
+}
+
+body.arabic #language-selector {
+    left: 20px;
+    right: auto;
+}
