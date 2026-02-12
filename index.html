@@ -2,18 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Black Market SD - Your ultimate financial guide. Stay informed with real-time SDG prices, gold rates, and instant currency conversions. Available on App Store and Google Play.">
+    <meta name="keywords" content="Black Market SD, SDG prices, currency converter, gold prices, Sudan, financial app">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://black-market-organization.github.io/">
+    <meta property="og:title" content="Black Market SD - Your Ultimate Financial Guide">
+    <meta property="og:description" content="Stay informed with real-time SDG prices, gold rates, and instant currency conversions.">
+    <meta property="og:image" content="https://black-market-organization.github.io/logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://black-market-organization.github.io/">
+    <meta property="twitter:title" content="Black Market SD - Your Ultimate Financial Guide">
+    <meta property="twitter:description" content="Stay informed with real-time SDG prices, gold rates, and instant currency conversions.">
+    <meta property="twitter:image" content="https://black-market-organization.github.io/logo.png">
+    
     <title data-en="Black Market Sd" data-ar="السوق الاسود"></title>
     <link rel="icon" href="logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#home" class="skip-to-content" data-en="Skip to content" data-ar="تخطي إلى المحتوى">Skip to content</a>
     <!-- Header -->
     <header role="banner">
         <div class="container">
             <a href="#home" aria-label="Black Market App Home">
-                <img src="logo.png" alt="Black Market Logo">
+                <img src="logo.png" alt="Black Market SD Logo" loading="eager">
             </a>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav role="navigation">
                 <ul>
                     <li><a href="#home" data-en="Home" data-ar="الرئيسية"></a></li>
@@ -37,9 +60,16 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h1 data-en="Your Ultimate Financial Guide" data-ar="دليلك المالي الأول"></h1>
-            <p data-en="Stay informed with real-time SDG prices, gold rates, and instant currency conversions." data-ar="ابقى على معرفة على اسعار العملات مقابل الجنيه السوداني بصورة فورية"></p>
-            <a href="#download" class="hero-button" data-en="Get Started" data-ar="ابدأ الآن"></a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 data-en="Your Ultimate Financial Guide" data-ar="دليلك المالي الأول"></h1>
+                    <p data-en="Stay informed with real-time SDG prices, gold rates, and instant currency conversions." data-ar="ابقى على معرفة على اسعار العملات مقابل الجنيه السوداني بصورة فورية"></p>
+                    <a href="#download" class="hero-button" data-en="Get Started" data-ar="ابدأ الآن"></a>
+                </div>
+                <div class="hero-image">
+                    <img src="mobile-screenshot.png" alt="Black Market SD App Screenshot" loading="lazy">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -49,14 +79,13 @@
             <h2 data-en="Key Features" data-ar="الميزات الرئيسية"></h2>
             <div class="features-inner">
                 <div class="feature">
-                    <img src="feature1-icon.png" alt="Feature 1 Icon">
+                    <img src="feature1-icon.png" alt="Real-Time SDG Currency Prices Icon" loading="lazy">
                     <h3 data-en="Real-Time SDG Prices" data-ar="أسعار العملات الفورية"></h3>
                     <p data-en="Access the latest SDG prices anytime, anywhere." data-ar="احصل على احدث الأسعار في اي مكان وزمان"></p>
                 </div>
                 <div class="feature">
-                    <img src="feature2-icon.png" alt="Feature 2 Icon">
+                    <img src="feature2-icon.png" alt="Gold Price Tracker Icon" loading="lazy">
                     <h3 data-en="Gold Price Tracker" data-ar="تابع أسعار الذهب"></h3>
-
                     <p data-en="Track gold price fluctuations with real-time updates." data-ar="تابع أسعار الذهب بصورة مستمرة وكن على علم بالتقلبات"></p>
                 </div>
             </div>
@@ -69,12 +98,12 @@
             <h2 data-en="Why Choose Black Market?" data-ar="لماذا تختار السوق الأسود؟"></h2>
             <div class="benefits-inner">
                 <div class="benefit">
-                    <img src="benefit1-icon.png" alt="Benefit 1 Icon">
+                    <img src="benefit1-icon.png" alt="Informed Financial Decisions Icon" loading="lazy">
                     <h3 data-en="Informed Decisions" data-ar="القرارات المالية"></h3>
                     <p data-en="Make smart financial choices with real-time data." data-ar="اتخذ قرارات مالية ذكية مع البيانات الفورية."></p>
                 </div>
                 <div class="benefit">
-                    <img src="benefit2-icon.png" alt="Benefit 2 Icon">
+                    <img src="benefit2-icon.png" alt="Mobile Access On-the-Go Icon" loading="lazy">
                     <h3 data-en="On-the-Go Access" data-ar="الوصول أثناء التنقل"></h3>
                     <p data-en="Access financial insights anytime, anywhere." data-ar="الوصول إلى البيانات المالية في اي وقت وزمان"></p>
                 </div>
@@ -87,8 +116,25 @@
         <div class="container">
             <h2 data-en="Get the App Now" data-ar="احصل على التطبيق الان"></h2>
             <div class="download-buttons">
-                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.blackmarketsd.com" class="download-button">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                <a target="_blank" href="https://apps.apple.com/app/black-market-sd/id6738841954" class="download-button" aria-label="Download on App Store">
+                    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&releaseDate=1733011200" alt="Download on the App Store" loading="lazy" onerror="this.src='https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2024-12-01&kind=iossoftware&bubble=ios_apps'">
+                </a>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.blackmarketsd.com" class="download-button" aria-label="Get it on Google Play">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-en="Contact Us" data-ar="اتصل بنا"></h2>
+            <p data-en="Have questions or feedback? We'd love to hear from you!" data-ar="هل لديك أسئلة أو ملاحظات؟ نحن نحب أن نسمع منك!"></p>
+            <div class="contact-info">
+                <a href="mailto:blackmarketsd@gmail.com" class="contact-email" data-en="Email: blackmarketsd@gmail.com" data-ar="البريد الإلكتروني: blackmarketsd@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>blackmarketsd@gmail.com</span>
                 </a>
             </div>
         </div>
@@ -101,7 +147,7 @@
                 <ul>
                     <li><a href="#home" data-en="Home" data-ar="الرئيسية"></a></li>
                     <li><a href="#features" data-en="Features" data-ar="الميزات"></a></li>
-                    <li><a href="#benefits" data-en="Benefits" data-ar="ال福利"></a></li>
+                    <li><a href="#benefits" data-en="Benefits" data-ar="الفوائد"></a></li>
                     <li><a href="#download" data-en="Download" data-ar="تنزيل"></a></li>
                     <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا"></a></li>
                 </ul>
@@ -116,6 +162,27 @@
         </div>
     </footer>
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Black Market SD",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5"
+        },
+        "description": "Your ultimate financial guide. Stay informed with real-time SDG prices, gold rates, and instant currency conversions."
+    }
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
