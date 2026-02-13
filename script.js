@@ -12,11 +12,29 @@ function setLanguage(lang) {
     } else {
         document.body.classList.remove('arabic');
     }
+    // Update document title based on selected language
+    var titleEl = document.querySelector('title');
+    if (titleEl) {
+        var titleText = lang === 'en' ? titleEl.getAttribute('data-en') : titleEl.getAttribute('data-ar');
+        if (titleText) {
+            titleEl.innerText = titleText;
+        }
+    }
+
     localStorage.setItem('lang', lang);
 }
 
 // Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language as early as possible
+    var savedLang = localStorage.getItem('lang');
+    var defaultLang = 'ar';
+    setLanguage(savedLang || defaultLang);
+    var langSelectInit = document.getElementById('lang-select');
+    if (langSelectInit) {
+        langSelectInit.value = savedLang || defaultLang;
+    }
+
     // Handle smooth scrolling for all anchor links
     var anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(function(link) {
@@ -93,41 +111,24 @@ document.addEventListener('DOMContentLoaded', function() {
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe sections for fade-in animation
-    var sections = document.querySelectorAll('.features, .benefits, .download, .contact');
-    sections.forEach(function(section) {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(section);
+    // Observe elements with animation utility classes
+    var animatedElements = document.querySelectorAll('.fade-up, .fade-in-scale');
+    animatedElements.forEach(function(el) {
+        observer.observe(el);
     });
-});
 
-window.onload = function() {
-    var savedLang = localStorage.getItem('lang');
-    var defaultLang = 'ar';
-    if (savedLang) {
-        setLanguage(savedLang);
-    } else {
-        setLanguage(defaultLang); // Default to Arabic
-    }
-    // Initialize language selector
+    // Language selector change handling
     var langSelect = document.getElementById('lang-select');
     if (langSelect) {
-        langSelect.value = savedLang || defaultLang;
+        langSelect.addEventListener('change', function() {
+            var lang = this.value;
+            setLanguage(lang);
+        });
     }
-};
-
-var langSelect = document.getElementById('lang-select');
-if (langSelect) {
-    langSelect.addEventListener('change', function() {
-        var lang = this.value;
-        setLanguage(lang);
-    });
-}
+});
