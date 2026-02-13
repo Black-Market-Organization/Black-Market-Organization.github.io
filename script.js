@@ -111,15 +111,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = function() {
     var savedLang = localStorage.getItem('lang');
+    var defaultLang = 'ar';
     if (savedLang) {
         setLanguage(savedLang);
     } else {
-        setLanguage('en'); // Default to English
+        setLanguage(defaultLang); // Default to Arabic
     }
     // Initialize language selector
     var langSelect = document.getElementById('lang-select');
     if (langSelect) {
-        langSelect.value = savedLang || 'en';
+        langSelect.value = savedLang || defaultLang;
     }
 };
 
